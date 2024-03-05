@@ -50,12 +50,10 @@ The GROUP BY clause groups the selected rows based on identical values in a colu
      for using COUNT, SUM, and AVG aggregate funtion , we must use group by clause.Like ,
       if we want average salary for each department, count employees for each department , sum of salary for each department  on employees table , we can run this code...
 
-     ```bash
 
-select department_name, avg(salary) as department_avarage_salary, COUNT(*) as total_employees , SUM(salary) as total_department_salary  from employees join departments USING(department_id) group by department_name
-
+```bash
+select department_name, avg(salary) as department_avarage_salary, COUNT(*) as total_employees , SUM(salary) as total_department_salary  from employees join departments USING(department_id) group by department_name;
 ```
-
 10. **What is the purpose of an index in PostgreSQL, and how does it optimize query performance?**
 
  When we find a spaciq data from table first it find's from table  and then give us the data from database. This process actually require's time to perform. And then indexing idea come from. Indexing main perpose is faster the query. When we execute a query that involves filtering, sorting, or joining data, PostgreSQL can utilize indexes to locate the relevant rows more efficiently. That's how index work faster. 
